@@ -28,5 +28,4 @@ app.get('/*', (req, res) =>
 res.sendFile('index.html', {root: './public'}));
 
 
-
 app.listen(PORT, () => console.log('Active'));

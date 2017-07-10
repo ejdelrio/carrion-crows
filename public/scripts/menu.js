@@ -4,9 +4,6 @@ $('nav img').on('click', function() {
   $('nav ul').slideToggle('fast');
 });
 
-$('nav a').on('click', function() {
-  if(window.innerWidth < 640) {
-    console.lo
-    $('nav ul').slideToggle('fast');
-  }
+$(window).resize(function() {
+  window.outerWidth > 640 ? $('nav ul').show() : null;
 });
