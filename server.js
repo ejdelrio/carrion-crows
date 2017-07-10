@@ -6,6 +6,7 @@ const fs = require('fs');
 const pg = require('pg');
 const bcrypt = require('bcrypt');
 const app = express();
+const priv_app = express();
 const PORT = process.env.PORT ||3000;
 const saltRounds = 10;
 
@@ -21,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
 app.get('/admin', (req, res) => {
-  res.sendFile('admin.html');
+  res.sendFile('admin.html', {root: './private'});
 });
 
 app.get('/*', (req, res) =>
