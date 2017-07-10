@@ -9,13 +9,33 @@ main>section {
   float: left;
   margin-left: 15vw;
   margin-top: 5vh;
-  background: pink;
+  outline: 2px solid #141414;
+}
+
+#home>div:first-child{
+  background: url("../img/crow.jpg");
+  background-size: contain;
+}
+
+#home>div:nth-child(2) {
+  background: url("../img/merch.jpg");
+  background-size: contain;
+}
+
+#home>div:nth-child(3) {
+  background: url("../img/disc.jpg");
+  background-size: contain;
+}
+
+#home>div:last-child {
+  background: url("../img/banjo.jpg");
+  background-size: contain;
 }
 
 #home>div>div {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   float: left;
   position: relative;
   transition: 350ms all;
@@ -29,7 +49,7 @@ main>section {
   margin-top: 45%;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 5vh;
 }
 
@@ -44,7 +64,6 @@ main>section {
     float: left;
     margin-left: 20vw;
     margin-top: 10vh;
-    background: pink;
   }
 
   #home {

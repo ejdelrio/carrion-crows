@@ -1,3 +1,6 @@
+* {
+  color: #636363;
+}
 li, ul {
   list-style: none;
   margin: 0;
@@ -13,14 +16,14 @@ h1 {
 }
 
 body {
-  background: blue;
+  background: black;
 }
 
 header {
   width: 100vw;
   height: 10vh;
   float: left;
-  background: #4a4c4f;
+  background: #141414;
   position: fixed;
   z-index: 999;
 }
@@ -70,7 +73,7 @@ nav li {
   height: 10vh;
   float: left;
   border-bottom: 1px solid black;
-  background: #4a4c4f;
+  background: #141414;
 }
 
 
@@ -82,7 +85,6 @@ nav a {
   float: left;
   margin-top: 3vh;
   font-size: 4vh;
-  color: black;
 }
 
 nav li:hover a, nav li:hover {

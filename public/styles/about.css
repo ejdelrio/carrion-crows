@@ -4,7 +4,7 @@
 
 #about>div {
   width: 80vw;
-  background: orange;
+  background: #141414;
   float: left;
   margin-left: 10vw;
   margin-top: 5vh;
@@ -19,7 +19,7 @@
   float: left;
   width: 80vw;
   margin-left: 10vw;
-  background: white;
+  background: #141414;
   margin-top: 5vh;
 }
 
@@ -27,7 +27,6 @@
 #about ul img {
   width: 30vw;
   height: 30vw;
-  background: black;
   float: left;
 }
 
@@ -35,7 +34,7 @@
   width: 50vw;
   float: left;
   height: 5vh;
-  background: red;
+  background: #141414;
   margin: 0;
   font-size: 5vh;
   text-align: center;
