@@ -5,5 +5,5 @@ $('nav img').on('click', function() {
 });
 
 $(window).resize(function() {
-  window.outerWidth > 640 ? $('nav ul').show() : null;
+  window.outerWidth >= 640 ? $('nav ul').show() : null;
 });
