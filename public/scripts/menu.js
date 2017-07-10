@@ -5,7 +5,9 @@ $('nav img').on('click', function() {
 });
 
 $('nav li').on('click', function() {
-  $('nav ul').slideToggle('fast');
+  if(window.innerWidth > 640) {
+    $('nav ul').slideToggle('fast');
+  }
 });
 
 $(window).resize(function() {
