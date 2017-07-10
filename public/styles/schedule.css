@@ -1,0 +1,43 @@
+#schedule {
+  display: none;
+}
+
+#schedule * {
+  margin: 0;
+  padding: 0;
+}
+#schedule>section {
+  width: 80vw;
+  margin-left: 10vw;
+  height: 80vh;
+  background: red;
+  margin-top: 1vh;
+  overflow-y: scroll;
+}
+
+#schedule h3 {
+  width: 100%;
+  text-align: center;
+}
+
+#schedule ul>li {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2.5vh;
+  background: green;
+}
+
+#schedule ul li>* {
+  font-size: 2vmax;
+}
+
+#schedule ul h6 {
+  display: inline-block;
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 640px) {
+  #schedule>section {
+    margin-top: 2.5vh;
+  }
+}

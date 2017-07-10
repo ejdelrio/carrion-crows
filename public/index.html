@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/music.css">
+    <link rel="stylesheet" href="./styles/schedule.css">
+    <script id="show-template" type="text/x-handlebars-template">
+      <li>
+        <h5>Date: {{date}}</h5>
+        <h5>Location: {{location}}</h5>
+        <h6>Cover: {{cover}}$ - </h6>
+        <h6>Time: {{time}}</h6>
+        <p>{{Description}}</p>
+      </li>
+   </script>
   </head>
   <body>
     <header>
@@ -18,11 +30,12 @@
         <nav>
           <img src="" alt="">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Schedule</a></li>
-            <li><a href="#">Merch</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/music">Music</a></li>
+            <li><a href="/schedule">Schedule</a></li>
+            <li><a href="/merch">Merch</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
       </section>
@@ -51,9 +64,96 @@
         </div>
       </section>
       <section id="about">
+        <div>
 
+        </div>
+        <section>
+          <ul>
+            <li>
+              <img src="" alt="">
+              <h2>Kelsey</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </li>
+            <li>
+              <img src="" alt="">
+              <h2>Dan</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </li>
+            <li>
+              <img src="" alt="">
+              <h2>Silas</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section id="music">
+        <section>
+          <h4>videos</h4>
+          <ul>
+            <li>
+              <iframe src="https://www.youtube.com/embed/Jq-fqPUxW1M" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+              <iframe src="https://www.youtube.com/embed/Jq-fqPUxW1M" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+              <iframe src="https://www.youtube.com/embed/Jq-fqPUxW1M" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+              <iframe src="https://www.youtube.com/embed/Jq-fqPUxW1M" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+              <iframe src="https://www.youtube.com/embed/Jq-fqPUxW1M" frameborder="0" allowfullscreen></iframe>
+            </li>
+          </ul>
+        </section>
+        <div>
+
+        </div>
+        <section>
+          <h4>Tracks</h4>
+        </section>
       </section>
       <section id="schedule">
+        <section>
+          <h3>Upcoming Shows</h3>
+          <ul>
+            <li>
+              <h5>Date: 01/01/19</h5>
+              <h5>Location: Cafe Racer</h5>
+              <h6>Cover: 0$</h6>
+              <p>Lots of crazy shit going down dude. Come light shit on fire with us >:D</p>
+            </li>
+            <li>
+              <h5>Date: 01/01/19</h5>
+              <h5>Location: Cafe Racer</h5>
+              <h6>Cover: 0$ - </h6>
+              <h6>Time: 16:00</h6>
+              <p>Lots of crazy shit going down dude. Come light shit on fire with us >:D</p>
+            </li>
+            <li>
+              <h5>Date: 01/01/19</h5>
+              <h5>Location: Cafe Racer</h5>
+              <h6>Cover: 0$</h6>
+              <p>Lots of crazy shit going down dude. Come light shit on fire with us >:D</p>
+            </li>
+            <li>
+              <h5>Date: 01/01/19</h5>
+              <h5>Location: Cafe Racer</h5>
+              <h6>Cover: 0$</h6>
+              <p>Lots of crazy shit going down dude. Come light shit on fire with us >:D</p>
+            </li>
+            <li>
+              <h5>Date: 01/01/19</h5>
+              <h5>Location: Cafe Racer</h5>
+              <h6>Cover: 0$</h6>
+              <p>Lots of crazy shit going down dude. Come light shit on fire with us >:D</p>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section id="merch">
 
       </section>
       <section id="contact">
@@ -66,4 +166,6 @@
   <script src="./lib/jquery.js"></script>
   <script src="./lib/handlebars.js"></script>
   <script src="./lib/page.js"></script>
+  <script src="./scripts/controller/navTabs.js"></script>
+  <script src="./scripts/menu.js"></script>
 </html>

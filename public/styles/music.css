@@ -1,0 +1,29 @@
+#music {
+  display: none;
+  float: left;
+  margin-left: 2.5vw;
+}
+
+#music>* {
+  float: left;
+}
+
+#music>section {
+  width: 45vw;
+  height: 80vh;
+  margin-top: 5vh;
+  outline: 1px solid black;
+  overflow-y: scroll;
+}
+
+#music>div {
+  width: 1vw;
+  height: 80vh;
+  background: black;
+  margin-top: 5vh;
+  border-radius: 20px;
+}
+
+#music>:last-child>* {
+  float: right;
+}
