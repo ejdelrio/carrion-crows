@@ -5,7 +5,7 @@ $('nav img').on('click', function() {
 });
 
 $('nav li').on('click', function() {
-  if(window.innerWidth > 640) {
+  if(window.innerWidth < 640) {
     $('nav ul').slideToggle('fast');
   }
 });
