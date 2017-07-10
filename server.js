@@ -20,12 +20,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-
-app.get('/', (req, res) =>
-res.sendFile('index.html', {root: './public'}));
-
 app.get('/admin', (req, res) => {
   res.sendFile('admin.html');
 });
+
+app.get('/*', (req, res) =>
+res.sendFile('index.html', {root: './public'}));
+
+
 
 app.listen(PORT, () => console.log('Active'));
