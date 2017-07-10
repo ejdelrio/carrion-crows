@@ -41,8 +41,8 @@ header section {
 }
 
 .logo img {
-  height: 10vw;
-  width: 10vw;
+  height: 8vmin;
+  width: 8vmin;
   float: left;
   margin-left: 2vw;
   margin-top: 2vh;
@@ -58,8 +58,8 @@ header section {
 }
 
 nav img {
-  width: 10vw;
-  height: 10vw;
+  width: 8vmin;
+  height: 8vmin;
   float: right;
   margin-right: 2vw;
   margin-top: 2vh;
