@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/music.css">
     <link rel="stylesheet" href="./styles/schedule.css">
+
     <script id="show-template" type="text/x-handlebars-template">
       <li>
         <h5>Date: {{date}}</h5>
@@ -19,6 +20,16 @@
         <p>{{Description}}</p>
       </li>
    </script>
+
+   <script id="member-template" type="text/x-handlebars-template">
+     <li>
+       <img src="{{imgPath}}">
+       <h2>{{first}}  {{last}}</h2>
+       <h4>Instruments: {{instruments}}</h4>
+       <p>{{bio}}</p>
+     </li>
+  </script>
+
   </head>
   <body>
     <header>
@@ -70,22 +81,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <section>
-          <ul>
-            <li>
-              <img src="./img/kelsey.jpg" alt="">
-              <h2>Kelsey</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </li>
-            <li>
-              <img src="./img/dan.jpg" alt="">
-              <h2>Dan</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </li>
-            <li>
-              <img src="./img/silas.jpg" alt="">
-              <h2>Silas</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </li>
+          <ul id="members">
           </ul>
         </section>
       </section>
@@ -163,6 +159,9 @@
       </section>
     </main>
     <footer>
+      <section>
+        <a href="/admin">Admin</a>
+      </section>
     </footer>
   </body>
   <script src="./lib/jquery.js"></script>
@@ -170,4 +169,8 @@
   <script src="./lib/page.js"></script>
   <script src="./scripts/controller/navTabs.js"></script>
   <script src="./scripts/menu.js"></script>
+  <script src="./scripts/model/members.js"></script>
+  <script src="./scripts/views/memberView.js"></script>
+  <script src="scripts/controller/memCont.js"></script>
+
 </html>

@@ -33,16 +33,32 @@
 #about ul h2 {
   width: 50vw;
   float: left;
+  height: 5vmin;
+  background: #141414;
+  margin: 0;
+  margin-top: 1vh;
+  font-size: 2vh;
+  text-align: center;
+}
+#about ul h4 {
+  width: 50vw;
+  float: left;
   height: 5vh;
   background: #141414;
   margin: 0;
-  font-size: 5vh;
+  padding: 0;
+  margin-top: 0.5vh;
+  font-size: 1.5vh;
   text-align: center;
 }
 
 #about ul p {
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5vh;
+  width: 100%;
   text-align: center;
-  width: 100%
+  font-size: 1.25vh;
 }
 
 @media only screen and (min-width: 640px) {
@@ -57,5 +73,24 @@
 
   #about ul h2 {
     width: 65vw;
+    font-size: 4vh;
+  }
+
+  #about ul h4 {
+    width: 65vw;
+    font-size: 3vh;
+  }
+
+  #about ul p {
+    font-size: 2.5vh;
+  }
+
+  footer {
+    width: 100vw;
+    height: 2vh;
+    background: white;
+    position: fixed;
+    float: left;
+    bottom: 0;
   }
 }
