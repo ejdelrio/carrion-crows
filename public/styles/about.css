@@ -7,6 +7,7 @@
   background: orange;
   float: left;
   margin-left: 10vw;
+  margin-top: 5vh;
 }
 
 
@@ -16,7 +17,6 @@
 
 #about ul li {
   float: left;
-  width: 10vh;
   width: 80vw;
   margin-left: 10vw;
   background: white;
@@ -32,7 +32,7 @@
 }
 
 #about ul h2 {
-  width: 45vw;
+  width: 50vw;
   float: left;
   height: 5vh;
   background: red;
@@ -44,4 +44,19 @@
 #about ul p {
   text-align: center;
   width: 100%
+}
+
+@media only screen and (min-width: 640px) {
+
+  #about>div {
+    margin-top: 10vh;
+  }
+  #about ul img{
+    width: 15vw;
+    height: 15vw;
+  }
+
+  #about ul h2 {
+    width: 65vw;
+  }
 }
