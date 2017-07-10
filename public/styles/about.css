@@ -4,44 +4,35 @@
 
 #about>div {
   width: 80vw;
-  height: 60vh;
   background: orange;
   float: left;
-  margin-top: 15vh;
   margin-left: 10vw;
 }
 
 
 #about ul {
-  width: 80vw;
-  height: 80vh;;
-  float: left;
-  margin-left: 10vw;
-  margin-top: 10vh;
+
 }
 
 #about ul li {
-  display: inline-block;
   float: left;
-  height: 100%;
-  width: 20vw;
+  width: 10vh;
+  width: 80vw;
   margin-left: 10vw;
   background: white;
+  margin-top: 5vh;
 }
 
-#about ul>:first-child {
-  margin-left: 0
-}
 
 #about ul img {
-  width: 20vw;
-  height: 20vw;
+  width: 30vw;
+  height: 30vw;
   background: black;
   float: left;
 }
 
 #about ul h2 {
-  width: 20vw;
+  width: 45vw;
   float: left;
   height: 5vh;
   background: red;
