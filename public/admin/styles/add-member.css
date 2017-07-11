@@ -1,0 +1,42 @@
+#add-member {
+  float: left;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+}
+
+#add-member form {
+  float: left;
+  width: 100vw;
+  background: red;
+  margin-top: 30vh;
+}
+
+#new-member>* {
+  float: left;
+}
+
+#new-member input {
+  width: 80vw;
+  height: 5vh;
+  margin-left: 10vw;
+}
+
+#new-member input:first-child{
+  margin-top: 5vh;
+}
+
+#new-member button {
+  width: 20vw;
+  height: 5vh;
+  margin-left: 10vw;
+  background: grey;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 5vh;
+}

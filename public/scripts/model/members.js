@@ -10,6 +10,7 @@ var app = app||{};
     this.instruments = tableRow.instrument;
     this.bio = tableRow.bio;
     this.imgPath = tableRow.img_path;
+    this.id = tableRow.member_id;
     Member.all.push(this);
   };
 
@@ -20,7 +21,8 @@ var app = app||{};
       result.forEach(row => new Member(row));
     }).then(() => {
       callback();
-    });
+    })
+    .then(() => admin_app.modMember.delete());
   };
 
   module.members = Member;

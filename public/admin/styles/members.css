@@ -1,0 +1,115 @@
+#band-members {
+  display: none;
+  float: left;
+  margin-top: 10vh;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+#band-members>button {
+  float: right;
+  margin-top: 5vh;
+  margin-right: 10vw;
+  color: grey;
+  border-radius: 20px;
+  color: black;
+  border: none;
+}
+
+
+#band-members ul li {
+  float: left;
+  width: 80vw;
+  margin-left: 10vw;
+  background: #141414;
+  margin-top: 5vh;
+}
+
+
+#band-members ul img {
+  width: 30vw;
+  height: 30vw;
+  float: left;
+}
+
+#band-members ul button {
+  width: 25vw;
+  float: right;
+  background: grey;
+  height: 3vh;
+  font-size: 2vh;
+  border: none;
+  border-radius: 20px;
+  color: black;
+}
+
+#band-members ul h2 {
+  width: 50vw;
+  float: left;
+  height: 5vmin;
+  background: #141414;
+  margin: 0;
+  margin-top: 1vh;
+  font-size: 2vh;
+  text-align: center;
+}
+#band-members ul h4 {
+  width: 50vw;
+  float: left;
+  height: 5vh;
+  background: #141414;
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5vh;
+  font-size: 1.5vh;
+  text-align: center;
+}
+
+#band-members ul p {
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5vh;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25vh;
+}
+
+@media only screen and (min-width: 640px) {
+
+
+  #band-members {
+    margin-top: 15vh;
+  }
+
+  #band-members>button {
+    margin-right: 0;
+  }
+
+  #band-members ul img{
+    width: 15vw;
+    height: 15vw;
+  }
+
+    #band-members ul button {
+      width: 15vw;
+      margin-left: 2vw;
+    }
+
+  #band-members ul h2 {
+    width: 65vw;
+    font-size: 4vh;
+  }
+
+  #band-members ul h4 {
+    width: 65vw;
+    font-size: 3vh;
+  }
+
+  #band-members ul p {
+    font-size: 2.5vh;
+  }
+
+}

@@ -34,27 +34,9 @@ header section {
   float: left;
 }
 
-.logo {
-  width: 85vw;;
-  height: 10vh;
-  float: left;
-}
 
-.logo img {
-  height: 8vmin;
-  width: 8vmin;
-  float: left;
-  margin-left: 2vw;
-  margin-top: 2vh;
-}
-
-.logo h1 {
-  height: 10vw;
-  width: 70vw;
-  font-size: 3.5vh;
-  float: left;
-  text-align: center;
-  margin-top: 2vh;
+header>:first-child {
+  width: 80vw;
 }
 
 nav img {
@@ -126,29 +108,22 @@ nav ul {
   }
 
   nav li {
-    width: 16.37499vw;
+    width: 33.33333vw;
     height: 5vh;
     display: inline-block;
-    border-left: 0.25vw solid black;
-  }
-
-  nav li:last-child {
-    border-right: 0.25vw solid black;
   }
 
   nav a {
-    width: 16.37499vw;
+    width: 33.33333vw;
     height: 2vh;
     margin: 0;
   }
 
-  footer {
-    width: 100vw;
-    height: 2vh;
-    background: white;
-    position: fixed;
+  main>section {
     float: left;
-    bottom: 0;
+    margin-top: 10vh;
+    width: 90vw;
+    margin-left: 5vh;
   }
 
 }

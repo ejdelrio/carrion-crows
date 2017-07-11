@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-app.get('/admin', (req, res) => {
+app.get('/admin/*', (req, res) => {
   res.sendFile('admin.html', {root: './private'});
 });
 
@@ -31,10 +31,9 @@ app.get('/login', (req, res) => {
 
 app.get('/validate', (req, res) => {
 
-  client.query('SELECT username FROM tablename WHERE username=$1',
-  [req.body.username])
+  client.query('SELECT * FROM admin')
   .then(result => {
-    res.body.available = !result.rows.length === 0;
+    res.send(!result.rows.length === 0);
   })
   .catch(err => console.log(err));
 });
@@ -43,16 +42,35 @@ app.get('/password', (req, res)=> {client.query('SELECT hash FROM tablename WHER
   [req.body.username])
   .then(result => {
     bcrypt.compare(req.password, result.row[0].hash, (err, valid) => {
-      res.body.valid  = valid ? result.row[0] : false;
+      res.send(valid ? result.row[0] : false);
     });
   });
 });
 
 app.get('/members', (req, res) => {
   client.query('SELECT * FROM members').then(result => {
-    console.log(result.rows);
     res.send(result.rows);
   });
+});
+
+app.post('/add-member', function(request, response) {
+  client.query(
+    'INSERT INTO members(first_name, last_name, instrument, bio, img_path) VALUES($1, $2, $3, $4, $5) ON CONFLICT DO NOTHING',
+    [request.body.first, request.body.last, request.body.instrument, request.body.bio, request.body.imgPath],
+    function(err) {
+      if (err) console.error(err);
+      response.send('member added!');
+    }
+  );
+});
+
+app.delete('/member/:id', (request, response) => {
+  client.query(
+    `DELETE FROM members WHERE member_id=$1;`,
+    [request.params.id]
+  )
+  .then(() => response.send('Delete complete'))
+  .catch(console.error);
 });
 
 app.get('/*', (req, res) =>
@@ -96,7 +114,7 @@ function createShows() {
   client.query(`
     CREATE TABLE IF NOT EXISTS
     shows (
-      member_id SERIAL PRIMARY KEY,
+      show_id SERIAL PRIMARY KEY,
       date INTEGER,
       location VARCHAR(255),
       time INTEGER,

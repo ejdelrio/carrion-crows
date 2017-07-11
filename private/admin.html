@@ -2,31 +2,89 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin</title>
-    <link rel="stylesheet" href="../public/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/admin/styles/base.css">
+    <link rel="stylesheet" href="/admin/styles/members.css">
+    <link rel="stylesheet" href="/admin/styles/add-member.css">
+    <script id="admin-member-template" type="text/x-handlebars-template">
+      <li>
+        <img src="{{imgPath}}">
+        <button type="button" name="edit-{{id}}">Edit</button>
+        <button type="button" name="delete-{{id}}">Delete</button>
+        <h2>{{first}}  {{last}}</h2>
+        <h4>Instruments: {{instruments}}</h4>
+        <p>{{bio}}</p>
+      </li>
+   </script>
+
+   <script id="admin-show-template" type="text/x-handlebars-template">
+     <li>
+       <img src="{{imgPath}}">
+       <h2>{{first}}  {{last}}</h2>
+       <h4>Instruments: {{instruments}}</h4>
+       <p>{{bio}}</p>
+     </li>
+  </script>
+
   </head>
   <body>
     <header>
       <section>
-
+        <h2>Admin Page</h2>
       </section>
-      <section>
-        <nav>
-          <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-          </ul>
-        </nav>
-      </section>
+      <nav>
+        <img src="/img/menu-icon.png" alt="">
+        <ul>
+          <li><a href="/admin/shows">Shows</a></li>
+          <li><a href="/admin/band-members">Band-Members</a></li>
+          <li><a href="/admin/shop">Shop</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
+
+      <section id="shows">
+        <section>
+          <ul id="admin_shows">
+
+          </ul>
+        </section>
+      </section>
+
+      <section id="band-members">
+        <button type="button" name="add-member">Add Member</button>
+        <ul id="admin_members">
+        </ul>
+      </section>
+
+      <section id="shop">
+
+      </section>
+      <section id="add-member">
+        <form id="new-member" action="index.html">
+          <input type="text" name="first" value="" placeholder="Enter First Name" required>
+          <input type="text" name="last" value="" placeholder="Enter Last Name" required>
+          <input type="text" name="intruments" value="" placeholder="Enter Intruments Played" required>
+          <input type="text" name="bio" value="" placeholder="Enter Bio" required>
+          <input type="text" name="image path" value="" placeholder="Enter Image Path" required>
+          <button type="button" id="cancel-add">Cancel</button>
+          <button type="button" id=submit-add>Add</button>
+        </form>
+
+      </section>
     </main>
     <footer>
-
     </footer>
   </body>
-  <script src="./lib/jquery.js"></script>
-  <script src="./lib/handlebars.js"></script>
-  <script src="./lib/page.js"></script>
+  <script src="/lib/jquery.js"></script>
+  <script src="/lib/handlebars.js"></script>
+  <script src="/lib/page.js"></script>
+  <script src="/admin/scripts/controller/navTabs.js"></script>
+  <script src="/scripts/menu.js"></script>
+  <script src="/scripts/model/members.js"></script>
+  <script src="/admin/scripts/views/memberView.js"></script>
+  <script src="/admin/scripts/controller/modifyMember.js"></script>
+  <script src="/admin/scripts/controller/addMember.js"></script>
 </html>
